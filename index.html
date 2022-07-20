@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+
+<body class="flex-column min-100-vh">
+     <!-- Header -->
+    <header class="container-fluid mainHeader text-center p-2">
+      <h1 class="weatherDashTxt"> Weather Dashboard</h1>
+    </header>
+  
+<!-- Left Side of Page -->    
+<main class=".container-sm d-md-flex">
+    <section class="col-12 col-md-3 ">
+      <div class=" citySearchDiv d-flex flex-column">
+        
+        <!-- Search Form -->
+        <div class="card">
+          <h3 class="card-header text-uppercase text-center">Search for a City </h3>
+          <div id="user-form" class="card-body d-flex flex-column">
+            <input type="text" id="city-input" autofocus="true" placeholder="San Diego" class="form-input p-2 w-53 city" />
+            <button type="button" id="search" class="btn btn-info w-53 mt-3">Search</button>
+          </div>
+        </div>
+      
+        <!-- Search History -->
+        <div class="card">
+          <h3 class="text-center">Search History </h3>
+          <div class="card-body d-flex flex-column" id="cityButtons"></div>
+          <!-- <ul id="cityButtons" class="list-group"></ul> -->
+
+        </div>
+      </div>
+    </section>
+  
+    <!-- Right Side of Page -->
+    <!-- Main Weather Section -->
+    <div class="d-flex flex-column col-12 col-md-9 vh-100">
+      <section class="col-12 col-md-9 h-30 w-100"  >
+        <div class="border border-secondary currentCityDiv h-100">
+          <div>
+            <h2 id="mainCity"></h2>
+            <div class="currentDayWeather"></div>
+              <ul class="listStyle">
+              <li id="currentTemp">Temp: </li>
+              <li id="currentWind">Wind: </li>
+              <li id="currentHumidity">Humidity: </li>
+              <li id="currentUV">UV Index: </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 Day Forecast Section -->
+      <section class=" col-12  h-30 mt-5 fiveDaySection">
+        <div class="col-12"><h3>5-Day Forecast:</h3></div>
+        <div class="col-12 d-md-flex mt-4" id="fiveDaySection">
+        </div>
+      </section>
+    </div>
+</main>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
